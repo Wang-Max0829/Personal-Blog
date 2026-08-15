@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{TITLE} · 技术笔记</title>
+<meta name="description" content="{DESC}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%94%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="{PREFIX}assets/css/style.css">
+<!-- KaTeX 数学公式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<!-- highlight.js 代码高亮 -->
+<link id="hljs-light" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
+<link id="hljs-dark" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css" disabled>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+{EXTRA_HEAD}
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(!t){ t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    document.documentElement.setAttribute('data-theme', t);
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{PREFIX}index.html">📔 技术笔记</a>
+    <nav class="nav">
+      <a href="{PREFIX}index.html">首页</a>
+      <a href="{PREFIX}about.html">关于</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="切换主题" title="切换明暗主题">🌓</button>
+    </nav>
+  </div>
+</header>
+<main class="container">
+{CONTENT}
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> 技术笔记 · 用 Markdown 与 ❤️ 构建 · 部署于 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+  </div>
+</footer>
+<script defer src="{PREFIX}assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<section class="hero">
+  <h1>技术笔记</h1>
+  <p class="hero-sub">记录算法、深度学习、编程与学习过程中的思考与沉淀。</p>
+</section>
+<div class="toolbar">
+  <input id="search" type="search" placeholder="搜索标题、标签或摘要…" autocomplete="off">
+  <div class="chips">
+    <button class="chip active" data-cat="all">全部</button>
+    <button class="chip" data-cat="algorithms">算法</button>
+    <button class="chip" data-cat="deep-learning">深度学习</button>
+    <button class="chip" data-cat="programming">编程</button>
+    <button class="chip" data-cat="notes">学习笔记</button>
+  </div>
+</div>
+<div id="post-list" class="post-list"></div>
+<script>window.POSTS = {POSTS_JSON};</script>

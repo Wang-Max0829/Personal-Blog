@@ -1,0 +1,16 @@
+# Python 虚拟环境
+.venv/
+
+# 构建产物（由 build.py / GitHub Actions 生成）
+public/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 助手内部数据（不入库）
+.workbuddy/
+
+# 系统文件
+.DS_Store
+Thumbs.db
